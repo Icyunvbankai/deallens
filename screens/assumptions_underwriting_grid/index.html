@@ -1,0 +1,520 @@
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#051424;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error": "#ffb4ab", "on-error-container": "#ffdad6", "secondary": "#4ae176", "on-tertiary-fixed": "#2a1700", "on-primary": "#002e6a", "surface-variant": "#273647", "secondary-container": "#00b954", "error-container": "#93000a", "surface-container": "#122131", "surface-container-lowest": "#010f1f", "on-background": "#d4e4fa", "primary-fixed": "#d8e2ff", "surface": "#051424", "on-secondary": "#003915", "secondary-fixed-dim": "#4ae176", "surface-bright": "#2c3a4c", "tertiary": "#ffb95f", "inverse-on-surface": "#233143", "on-primary-container": "#00285d", "inverse-surface": "#d4e4fa", "secondary-fixed": "#6bff8f", "inverse-primary": "#005ac2", "primary": "#adc6ff", "primary-container": "#4d8eff", "surface-container-highest": "#273647", "background": "#051424", "surface-dim": "#051424", "surface-tint": "#adc6ff", "on-tertiary-fixed-variant": "#653e00", "primary-fixed-dim": "#adc6ff", "surface-container-high": "#1c2b3c", "on-tertiary-container": "#3e2400", "on-error": "#690005", "tertiary-fixed": "#ffddb8", "on-primary-fixed": "#001a42", "on-secondary-fixed-variant": "#005321", "on-secondary-container": "#004119", "on-primary-fixed-variant": "#004395", "tertiary-container": "#ca8100", "on-secondary-fixed": "#002109", "tertiary-fixed-dim": "#ffb95f", "outline-variant": "#424754", "surface-container-low": "#0d1c2d", "outline": "#8c909f", "on-surface-variant": "#c2c6d6", "on-tertiary": "#472a00", "on-surface": "#d4e4fa" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-sm": "0.5rem", "margin-desktop": "3rem", "gutter-desktop": "1.5rem", "margin": "1rem", "space-xl": "2.5rem", "margin-tablet": "2rem", "space-xs": "0.25rem", "gutter": "1rem", "space-md": "1rem", "space-lg": "1.5rem" }, "fontFamily": { "headline-md": ["IBM Plex Sans"], "headline-sm": ["IBM Plex Sans"], "headline-lg": ["IBM Plex Sans"], "metric-display": ["Space Mono"], "display-hero-mobile": ["IBM Plex Sans"], "body-lg": ["IBM Plex Sans"], "body-sm": ["IBM Plex Sans"], "display-hero": ["IBM Plex Sans"], "metric-display-mobile": ["Space Mono"], "body-md": ["IBM Plex Sans"], "code-inline": ["Space Mono"], "headline-lg-mobile": ["IBM Plex Sans"], "metric-sm": ["Space Mono"], "label-caps": ["IBM Plex Sans"], "metric-regular": ["Space Mono"] }, "fontSize": { "headline-md": ["20px", {"lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "headline-sm": ["16px", {"lineHeight": "22px", "fontWeight": "600"}], "headline-lg": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600"}], "metric-display": ["32px", {"lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "display-hero-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}], "display-hero": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "metric-display-mobile": ["24px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}], "code-inline": ["12px", {"lineHeight": "16px", "fontWeight": "400"}], "headline-lg-mobile": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "metric-sm": ["13px", {"lineHeight": "16px", "fontWeight": "400"}], "label-caps": ["11px", {"lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600"}], "metric-regular": ["16px", {"lineHeight": "20px", "fontWeight": "700"}] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_12px_rgba(1,15,31,0.6)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-primary text-[20px]">query_stats</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-bold truncate">DealLens</span><span class="px-1.5 py-0.5 rounded bg-surface-container text-secondary font-code-inline text-code-inline leading-none shrink-0">BYOK ACTIVE</span></div><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Underwrite rentals like a pro</span></div></div><div class="flex items-center gap-space-xs shrink-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin py-space-md space-y-space-lg">
+<!-- Header & Context Banner -->
+<div class="flex flex-col space-y-space-xs">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-code-inline text-code-inline uppercase tracking-wider font-bold">Assumption Model</span>
+<span class="flex h-2 w-2 rounded-full bg-secondary animate-pulse"></span>
+</div>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors text-body-sm font-body-sm" id="scenario-benchmark-btn">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Presets</span>
+</button>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold tracking-tight">Deal Assumptions</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Customizable underwriting grid with national-median defaults. Plain-English tooltips on every item.</p>
+<!-- Property Deal Context Chip -->
+<div class="mt-space-xs flex items-center justify-between p-3 rounded-lg bg-surface-container-high shadow-sm">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[18px]">home_pin</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="text-tertiary font-code-inline text-code-inline uppercase font-bold tracking-wide">[DEMO]</span>
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">1234 Demo St</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Fort Pierce, FL • St. Lucie County</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 pl-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Acquisition</span>
+<span class="font-metric-regular text-metric-regular text-on-surface font-bold" data-raw="250000" id="prop-price">$250,000</span>
+</div>
+</div>
+</div>
+<!-- Interactive Live Verdict Pill -->
+<div class="rounded-xl p-space-md bg-surface-container-lowest shadow-md flex flex-col space-y-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">bolt</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">Dynamic Yield Verdict</span>
+</div>
+<div class="px-2.5 py-0.5 rounded-full bg-error-container text-error font-code-inline text-code-inline uppercase font-bold flex items-center gap-1" id="verdict-chip">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+<span id="verdict-status-text">Marginal (-$74/mo)</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<div class="p-2.5 rounded bg-surface-container flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Net Cash Flow</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-metric-display-mobile text-metric-display-mobile text-error font-bold" id="summary-cash-flow">-$74.12</span>
+<span class="font-code-inline text-code-inline text-on-surface-variant">/mo</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5" id="summary-cash-flow-sub">Under full 8% mgmt</span>
+</div>
+<div class="p-2.5 rounded bg-surface-container flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Net Operating Income</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-metric-display-mobile text-metric-display-mobile text-secondary font-bold" id="summary-noi">$1,173.33</span>
+<span class="font-code-inline text-code-inline text-on-surface-variant">/mo</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">$14,080 / yr un-levered</span>
+</div>
+</div>
+<!-- Management Mode Toggle Micro-Action -->
+<div class="flex items-center justify-between pt-1 p-2 rounded bg-surface-container-high">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">engineering</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Self-Managed Mode</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" id="mgmt-toggle" type="checkbox">
+<div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary-container"></div>
+</label>
+</div>
+</div>
+<!-- SECTION 1: Financing & Capital Structure -->
+<div class="flex flex-col space-y-space-sm rounded-xl bg-surface-container-low p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[15px]">account_balance</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">1. Financing &amp; Capital</h2>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">30-Yr Fixed Conv</span>
+</div>
+<!-- Down Payment Row -->
+<div class="p-3 rounded-lg bg-surface-container flex flex-col space-y-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<label class="font-body-md text-body-md text-on-surface font-medium">Down Payment</label>
+<button class="text-outline hover:text-on-surface transition-colors" onclick="toggleTooltip('tt-down-payment')" type="button">
+<span class="material-symbols-outlined text-[16px]">info</span>
+</button>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-code-inline text-code-inline text-on-surface-variant" id="dp-dollars-label">$62,500</span>
+<span class="font-metric-regular text-metric-regular text-primary font-bold" id="dp-pct-label">25.0%</span>
+</div>
+</div>
+<div class="hidden p-2 rounded bg-surface-container-highest text-body-sm font-body-sm text-on-surface-variant" id="tt-down-payment">
+        Standard investor down payment for optimal conventional rates. Lowering below 20% incurs PMI.
+      </div>
+<input class="w-full h-1.5 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary" id="input-dp" max="40" min="15" step="1" type="range" value="25">
+<div class="flex justify-between text-code-inline font-code-inline text-on-surface-variant text-[10px]">
+<span>15% ($37.5k)</span>
+<span>25% ($62.5k)</span>
+<span>40% ($100k)</span>
+</div>
+</div>
+<!-- Interest Rate & Loan Term Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-3 rounded-lg bg-surface-container flex flex-col space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface">Interest Rate</span>
+<button class="text-outline" onclick="toggleTooltip('tt-rate')" type="button">
+<span class="material-symbols-outlined text-[14px]">info</span>
+</button>
+</div>
+<div class="hidden p-1.5 mb-1 rounded bg-surface-container-highest text-code-inline font-code-inline text-on-surface-variant text-[11px]" id="tt-rate">
+          Current 30-yr fixed investment property rate.
+        </div>
+<div class="flex items-center justify-between mt-1">
+<button class="w-7 h-7 rounded bg-surface-container-high hover:bg-surface-bright flex items-center justify-center text-on-surface text-headline-sm font-bold active:scale-95 transition-all" onclick="adjustRate(-0.125)" type="button">-</button>
+<span class="font-metric-regular text-metric-regular text-on-surface font-bold" id="rate-label">7.00%</span>
+<button class="w-7 h-7 rounded bg-surface-container-high hover:bg-surface-bright flex items-center justify-center text-on-surface text-headline-sm font-bold active:scale-95 transition-all" onclick="adjustRate(0.125)" type="button">+</button>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container flex flex-col space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface">Loan Term</span>
+<span class="font-code-inline text-code-inline text-secondary uppercase text-[10px]">Optimal</span>
+</div>
+<div class="flex items-center justify-between mt-1">
+<span class="font-metric-regular text-metric-regular text-on-surface font-bold">30 Yrs</span>
+<span class="material-symbols-outlined text-outline text-[18px]">lock</span>
+</div>
+<span class="text-code-inline font-code-inline text-on-surface-variant text-[11px]">Amortized fixed</span>
+</div>
+</div>
+<!-- Closing Costs and P&I Output Row -->
+<div class="grid grid-cols-2 gap-space-sm pt-0.5">
+<div class="p-3 rounded-lg bg-surface-container flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Closing Costs (3%)</span>
+<span class="font-metric-regular text-metric-regular text-on-surface font-bold mt-1">$7,500</span>
+<span class="text-code-inline font-code-inline text-on-surface-variant text-[11px]">Escrow, title, fees</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-high flex flex-col">
+<span class="font-label-caps text-label-caps text-primary uppercase">Monthly P&amp;I</span>
+<span class="font-metric-regular text-metric-regular text-primary font-bold mt-1" id="calculated-pi">$1,247.45</span>
+<span class="text-code-inline font-code-inline text-on-surface-variant text-[11px]">Deterministic math</span>
+</div>
+</div>
+</div>
+<!-- SECTION 2: Operating Expenses (Opex) -->
+<div class="flex flex-col space-y-space-sm rounded-xl bg-surface-container-low p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[15px]">real_estate_agent</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">2. Operating Expenses (Opex)</h2>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Gross Rent: $2,000/mo</span>
+</div>
+<!-- Itemized List -->
+<div class="space-y-2">
+<!-- Property Taxes -->
+<div class="p-3 rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex flex-col min-w-0 pr-2">
+<div class="flex items-center gap-1.5">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Property Taxes</span>
+<button class="text-outline shrink-0 hover:text-on-surface" onclick="toggleTooltip('tt-tax')" type="button">
+<span class="material-symbols-outlined text-[15px]">info</span>
+</button>
+</div>
+<span class="text-code-inline font-code-inline text-on-surface-variant">$2,600 / yr</span>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-metric-regular text-metric-regular text-on-surface font-bold">$216.67</span>
+<span class="text-code-inline font-code-inline text-on-surface-variant">/mo</span>
+</div>
+</div>
+<div class="hidden p-2 rounded bg-surface-container-highest text-body-sm font-body-sm text-on-surface-variant" id="tt-tax">
+        St. Lucie County ad valorem rate ~1.04%. Reassessed upon purchase.
+      </div>
+<!-- Hazard & Flood Insurance -->
+<div class="p-3 rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex flex-col min-w-0 pr-2">
+<div class="flex items-center gap-1.5">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Hazard &amp; Flood Insurance</span>
+<button class="text-outline shrink-0 hover:text-on-surface" onclick="toggleTooltip('tt-ins')" type="button">
+<span class="material-symbols-outlined text-[15px]">info</span>
+</button>
+</div>
+<span class="text-code-inline font-code-inline text-on-surface-variant">$1,800 / yr</span>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-metric-regular text-metric-regular text-on-surface font-bold">$150.00</span>
+<span class="text-code-inline font-code-inline text-on-surface-variant">/mo</span>
+</div>
+</div>
+<div class="hidden p-2 rounded bg-surface-container-highest text-body-sm font-body-sm text-on-surface-variant" id="tt-ins">
+        Florida hazard &amp; hurricane coverage baseline. Zone X elevated interior lot.
+      </div>
+<!-- HOA Dues -->
+<div class="p-3 rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex flex-col min-w-0 pr-2">
+<div class="flex items-center gap-1.5">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">HOA Dues</span>
+<button class="text-outline shrink-0 hover:text-on-surface" onclick="toggleTooltip('tt-hoa')" type="button">
+<span class="material-symbols-outlined text-[15px]">info</span>
+</button>
+</div>
+<span class="text-code-inline font-code-inline text-secondary">Zero fee lot</span>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-metric-regular text-metric-regular text-on-surface font-bold">$0.00</span>
+<span class="text-code-inline font-code-inline text-on-surface-variant">/mo</span>
+</div>
+</div>
+<div class="hidden p-2 rounded bg-surface-container-highest text-body-sm font-body-sm text-on-surface-variant" id="tt-hoa">
+        No mandatory HOA fees on this single-family detached lot.
+      </div>
+<!-- Vacancy Allowance -->
+<div class="p-3 rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex flex-col min-w-0 pr-2">
+<div class="flex items-center gap-1.5">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Vacancy Allowance</span>
+<button class="text-outline shrink-0 hover:text-on-surface" onclick="toggleTooltip('tt-vac')" type="button">
+<span class="material-symbols-outlined text-[15px]">info</span>
+</button>
+</div>
+<span class="text-code-inline font-code-inline text-on-surface-variant">5.0% of Gross Rent</span>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-metric-regular text-metric-regular text-on-surface font-bold">$100.00</span>
+<span class="text-code-inline font-code-inline text-on-surface-variant">/mo</span>
+</div>
+</div>
+<div class="hidden p-2 rounded bg-surface-container-highest text-body-sm font-body-sm text-on-surface-variant" id="tt-vac">
+        National average vacancy is 5–8%. Accounts for ~18 days turn time between leases.
+      </div>
+<!-- Maintenance & Repairs -->
+<div class="p-3 rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex flex-col min-w-0 pr-2">
+<div class="flex items-center gap-1.5">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Maintenance &amp; Repairs</span>
+<button class="text-outline shrink-0 hover:text-on-surface" onclick="toggleTooltip('tt-maint')" type="button">
+<span class="material-symbols-outlined text-[15px]">info</span>
+</button>
+</div>
+<span class="text-code-inline font-code-inline text-on-surface-variant">5.0% of Gross Rent</span>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-metric-regular text-metric-regular text-on-surface font-bold">$100.00</span>
+<span class="text-code-inline font-code-inline text-on-surface-variant">/mo</span>
+</div>
+</div>
+<div class="hidden p-2 rounded bg-surface-container-highest text-body-sm font-body-sm text-on-surface-variant" id="tt-maint">
+        Standard ongoing repair reserve for plumbing, minor electrical, and appliances.
+      </div>
+<!-- CapEx Reserve -->
+<div class="p-3 rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex flex-col min-w-0 pr-2">
+<div class="flex items-center gap-1.5">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">CapEx Reserve</span>
+<button class="text-outline shrink-0 hover:text-on-surface" onclick="toggleTooltip('tt-capex')" type="button">
+<span class="material-symbols-outlined text-[15px]">info</span>
+</button>
+</div>
+<span class="text-code-inline font-code-inline text-on-surface-variant">5.0% of Gross Rent</span>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-metric-regular text-metric-regular text-on-surface font-bold">$100.00</span>
+<span class="text-code-inline font-code-inline text-on-surface-variant">/mo</span>
+</div>
+</div>
+<div class="hidden p-2 rounded bg-surface-container-highest text-body-sm font-body-sm text-on-surface-variant" id="tt-capex">
+        Roof, HVAC, and water heater sinking fund. Essential hedge against sudden cash drains.
+      </div>
+<!-- Property Management -->
+<div class="p-3 rounded-lg bg-surface-container flex items-center justify-between transition-colors" id="pm-row-box">
+<div class="flex flex-col min-w-0 pr-2">
+<div class="flex items-center gap-1.5">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Property Management</span>
+<button class="text-outline shrink-0 hover:text-on-surface" onclick="toggleTooltip('tt-pm')" type="button">
+<span class="material-symbols-outlined text-[15px]">info</span>
+</button>
+</div>
+<span class="text-code-inline font-code-inline text-on-surface-variant" id="pm-subtext">8.0% (Full-Service PM)</span>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-metric-regular text-metric-regular text-on-surface font-bold" id="pm-cost-label">$160.00</span>
+<span class="text-code-inline font-code-inline text-on-surface-variant">/mo</span>
+</div>
+</div>
+<div class="hidden p-2 rounded bg-surface-container-highest text-body-sm font-body-sm text-on-surface-variant" id="tt-pm">
+        Professional third-party property management fee covering tenant relations, maintenance dispatch, and rent collection.
+      </div>
+</div>
+</div>
+<!-- SECTION 3: Operating Totals Breakdown -->
+<div class="flex flex-col space-y-space-sm rounded-xl bg-surface-container-low p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Operating Totals Summary</h2>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Consolidated</span>
+</div>
+<!-- Mini Visual Waterfall Bar -->
+<div class="flex flex-col space-y-1">
+<div class="flex justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Gross Monthly Rent ($2,000) Allocation</span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded-full overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 62.4%;" title="P&amp;I Debt"></div>
+<div class="bg-tertiary h-full" style="width: 18.3%;" title="Taxes &amp; Ins"></div>
+<div class="bg-surface-variant h-full" style="width: 15.0%;" title="Reserves &amp; Vacancy"></div>
+<div class="bg-secondary-container h-full" id="waterfall-pm" style="width: 8.0%;" title="Property Mgmt"></div>
+</div>
+<div class="flex items-center justify-between text-code-inline font-code-inline text-[10px] text-on-surface-variant pt-0.5">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary inline-block"></span> P&amp;I</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-tertiary inline-block"></span> Tax/Ins</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-surface-variant inline-block"></span> Reserves</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary-container inline-block"></span> PM</span>
+</div>
+</div>
+<!-- Totals Line Items -->
+<div class="space-y-2 pt-2">
+<div class="flex justify-between text-body-md font-body-md">
+<span class="text-on-surface-variant">Total Operating Expenses (Opex)</span>
+<span class="font-metric-regular text-metric-regular text-on-surface font-bold" id="total-opex">$826.67 / mo</span>
+</div>
+<div class="flex justify-between text-body-md font-body-md">
+<span class="text-on-surface-variant">Debt Service (P&amp;I)</span>
+<span class="font-metric-regular text-metric-regular text-on-surface font-bold">$1,247.45 / mo</span>
+</div>
+<div class="flex justify-between text-body-md font-body-md pt-2 border-t-0">
+<span class="text-on-surface font-semibold">Total Monthly Outflows</span>
+<span class="font-metric-regular text-metric-regular text-on-surface font-bold" id="total-outflows">$2,074.12 / mo</span>
+</div>
+</div>
+</div>
+<!-- Bottom Action Center -->
+<div class="flex flex-col space-y-space-sm pt-space-xs">
+<button class="w-full h-12 rounded-lg bg-secondary text-on-secondary font-headline-sm text-headline-sm font-bold flex items-center justify-center gap-2 shadow-lg hover:opacity-95 active:scale-[0.99] transition-all" id="primary-cta-btn" type="button">
+<span>View Full Underwriting Results</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<button class="w-full h-10 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-body-md text-body-md font-medium flex items-center justify-center gap-1.5 transition-colors" id="reset-defaults-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+<span>Reset to National Defaults</span>
+</button>
+</div>
+<!-- Educational Delight Note -->
+<div class="p-3 rounded-lg bg-surface-container-lowest flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">verified_user</span>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+      Deterministic formula based on St. Lucie County tax assessor and Fannie Mae tier 1 investor mortgage guidelines. No hidden spreadsheet macros.
+    </p>
+</div>
+</div>
+<script>
+  // Tooltip Toggler
+  function toggleTooltip(id) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.classList.toggle('hidden');
+    }
+  }
+
+  // Interactive Calculator State
+  const state = {
+    price: 250000,
+    grossRent: 2000,
+    downPaymentPct: 25.0,
+    ratePct: 7.00,
+    termYears: 30,
+    taxesAnnual: 2600,
+    insuranceAnnual: 1800,
+    hoaMonthly: 0,
+    vacancyPct: 5.0,
+    maintPct: 5.0,
+    capexPct: 5.0,
+    pmPct: 8.0,
+    selfManaged: false
+  };
+
+  const dpInput = document.getElementById('input-dp');
+  const dpPctLabel = document.getElementById('dp-pct-label');
+  const dpDollarsLabel = document.getElementById('dp-dollars-label');
+  const rateLabel = document.getElementById('rate-label');
+  const calculatedPiEl = document.getElementById('calculated-pi');
+  const mgmtToggle = document.getElementById('mgmt-toggle');
+  const pmCostLabel = document.getElementById('pm-cost-label');
+  const pmSubtext = document.getElementById('pm-subtext');
+  const summaryCashFlow = document.getElementById('summary-cash-flow');
+  const summaryCashFlowSub = document.getElementById('summary-cash-flow-sub');
+  const summaryNoi = document.getElementById('summary-noi');
+  const verdictChip = document.getElementById('verdict-chip');
+  const verdictStatusText = document.getElementById('verdict-status-text');
+  const totalOpexEl = document.getElementById('total-opex');
+  const totalOutflowsEl = document.getElementById('total-outflows');
+  const waterfallPm = document.getElementById('waterfall-pm');
+
+  function calculatePI(principal, annualRate, years) {
+    if (principal <= 0) return 0;
+    const r = (annualRate / 100) / 12;
+    const n = years * 12;
+    if (r === 0) return principal / n;
+    return (principal * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+  }
+
+  function recalculate() {
+    const dpDollars = state.price * (state.downPaymentPct / 100);
+    const loanAmount = state.price - dpDollars;
+    const monthlyPI = calculatePI(loanAmount, state.ratePct, state.termYears);
+
+    const taxesMonthly = state.taxesAnnual / 12;
+    const insMonthly = state.insuranceAnnual / 12;
+    const hoa = state.hoaMonthly;
+    const vacancyMonthly = state.grossRent * (state.vacancyPct / 100);
+    const maintMonthly = state.grossRent * (state.maintPct / 100);
+    const capexMonthly = state.grossRent * (state.capexPct / 100);
+    
+    // PM Fee
+    const pmFeePct = state.selfManaged ? 0 : state.pmPct;
+    const pmMonthly = state.grossRent * (pmFeePct / 100);
+
+    const totalOpex = taxesMonthly + insMonthly + hoa + vacancyMonthly + maintMonthly + capexMonthly + pmMonthly;
+    const noiMonthly = state.grossRent - totalOpex;
+    const netCashFlow = noiMonthly - monthlyPI;
+    const totalOutflows = totalOpex + monthlyPI;
+
+    // Update DOM
+    dpPctLabel.textContent = state.downPaymentPct.toFixed(1) + '%';
+    dpDollarsLabel.textContent = '$' + Math.round(dpDollars).toLocaleString();
+    rateLabel.textContent = state.ratePct.toFixed(2) + '%';
+    calculatedPiEl.textContent = '$' + monthlyPI.toFixed(2);
+
+    if (state.selfManaged) {
+      pmCostLabel.textContent = '$0.00';
+      pmSubtext.textContent = '0% (Self-Managed)';
+      waterfallPm.style.width = '0%';
+    } else {
+      pmCostLabel.textContent = '$' + pmMonthly.toFixed(2);
+      pmSubtext.textContent = '8.0% (Full-Service PM)';
+      waterfallPm.style.width = '8%';
+    }
+
+    totalOpexEl.textContent = '$' + totalOpex.toFixed(2) + ' / mo';
+    totalOutflowsEl.textContent = '$' + totalOutflows.toFixed(2) + ' / mo';
+    summaryNoi.textContent = '$' + noiMonthly.toFixed(2);
+
+    // Cash flow visual state
+    if (netCashFlow >= 0) {
+      summaryCashFlow.textContent = '+$' + netCashFlow.toFixed(2);
+      summaryCashFlow.className = 'font-metric-display-mobile text-metric-display-mobile text-secondary font-bold';
+      verdictChip.className = 'px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-code-inline text-code-inline uppercase font-bold flex items-center gap-1';
+      verdictChip.innerHTML = '<span class="material-symbols-outlined text-[14px]">check_circle</span> <span>Positive (+$' + Math.round(netCashFlow) + '/mo)</span>';
+    } else {
+      summaryCashFlow.textContent = '-$' + Math.abs(netCashFlow).toFixed(2);
+      summaryCashFlow.className = 'font-metric-display-mobile text-metric-display-mobile text-error font-bold';
+      verdictChip.className = 'px-2.5 py-0.5 rounded-full bg-error-container text-error font-code-inline text-code-inline uppercase font-bold flex items-center gap-1';
+      verdictChip.innerHTML = '<span class="material-symbols-outlined text-[14px]">warning</span> <span>Marginal (-$' + Math.abs(Math.round(netCashFlow)) + '/mo)</span>';
+    }
+
+    summaryCashFlowSub.textContent = state.selfManaged ? 'Self-Managed (Saved $160/mo)' : 'Under full 8% mgmt';
+  }
+
+  // Adjust Rate Stepper
+  function adjustRate(delta) {
+    state.ratePct = Math.max(3.0, Math.min(12.0, state.ratePct + delta));
+    recalculate();
+  }
+
+  // Down Payment slider
+  dpInput.addEventListener('input', (e) => {
+    state.downPaymentPct = parseFloat(e.target.value);
+    recalculate();
+  });
+
+  // Mgmt Toggle
+  mgmtToggle.addEventListener('change', (e) => {
+    state.selfManaged = e.target.checked;
+    recalculate();
+  });
+
+  // Reset Button
+  document.getElementById('reset-defaults-btn').addEventListener('click', () => {
+    state.downPaymentPct = 25.0;
+    state.ratePct = 7.00;
+    state.selfManaged = false;
+    dpInput.value = 25;
+    mgmtToggle.checked = false;
+    recalculate();
+  });
+
+  // Primary CTA Micro-interaction
+  document.getElementById('primary-cta-btn').addEventListener('click', function() {
+    const originalText = this.innerHTML;
+    this.innerHTML = '<span class="material-symbols-outlined animate-spin text-[20px]">sync</span><span>Running Monte Carlo...</span>';
+    setTimeout(() => {
+      this.innerHTML = '<span class="material-symbols-outlined text-[20px]">check</span><span>Report Generated</span>';
+      setTimeout(() => {
+        this.innerHTML = originalText;
+      }, 1500);
+    }, 800);
+  });
+
+  // Initial Paint
+  recalculate();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-1px_16px_rgba(1,15,31,0.7)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] transition-colors text-primary font-semibold" data-path="analyze" href="#"><span class="material-symbols-outlined text-[22px]">tune</span><span class="font-label-caps text-label-caps mt-0.5">Analyze</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">analytics</span><span class="font-label-caps text-label-caps mt-0.5">Dashboard</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="watch-&amp;-comp" href="#"><span class="material-symbols-outlined text-[22px]">compare_arrows</span><span class="font-label-caps text-label-caps mt-0.5">Watch &amp; Comp</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[22px]">lock_open</span><span class="font-label-caps text-label-caps mt-0.5">Settings</span></a></div></nav></body></html>
