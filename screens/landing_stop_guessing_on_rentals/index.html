@@ -1,0 +1,529 @@
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#051424;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error": "#ffb4ab", "on-error-container": "#ffdad6", "secondary": "#4ae176", "on-tertiary-fixed": "#2a1700", "on-primary": "#002e6a", "surface-variant": "#273647", "secondary-container": "#00b954", "error-container": "#93000a", "surface-container": "#122131", "surface-container-lowest": "#010f1f", "on-background": "#d4e4fa", "primary-fixed": "#d8e2ff", "surface": "#051424", "on-secondary": "#003915", "secondary-fixed-dim": "#4ae176", "surface-bright": "#2c3a4c", "tertiary": "#ffb95f", "inverse-on-surface": "#233143", "on-primary-container": "#00285d", "inverse-surface": "#d4e4fa", "secondary-fixed": "#6bff8f", "inverse-primary": "#005ac2", "primary": "#adc6ff", "primary-container": "#4d8eff", "surface-container-highest": "#273647", "background": "#051424", "surface-dim": "#051424", "surface-tint": "#adc6ff", "on-tertiary-fixed-variant": "#653e00", "primary-fixed-dim": "#adc6ff", "surface-container-high": "#1c2b3c", "on-tertiary-container": "#3e2400", "on-error": "#690005", "tertiary-fixed": "#ffddb8", "on-primary-fixed": "#001a42", "on-secondary-fixed-variant": "#005321", "on-secondary-container": "#004119", "on-primary-fixed-variant": "#004395", "tertiary-container": "#ca8100", "on-secondary-fixed": "#002109", "tertiary-fixed-dim": "#ffb95f", "outline-variant": "#424754", "surface-container-low": "#0d1c2d", "outline": "#8c909f", "on-surface-variant": "#c2c6d6", "on-tertiary": "#472a00", "on-surface": "#d4e4fa" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-sm": "0.5rem", "margin-desktop": "3rem", "gutter-desktop": "1.5rem", "margin": "1rem", "space-xl": "2.5rem", "margin-tablet": "2rem", "space-xs": "0.25rem", "gutter": "1rem", "space-md": "1rem", "space-lg": "1.5rem" }, "fontFamily": { "headline-md": ["IBM Plex Sans"], "headline-sm": ["IBM Plex Sans"], "headline-lg": ["IBM Plex Sans"], "metric-display": ["Space Mono"], "display-hero-mobile": ["IBM Plex Sans"], "body-lg": ["IBM Plex Sans"], "body-sm": ["IBM Plex Sans"], "display-hero": ["IBM Plex Sans"], "metric-display-mobile": ["Space Mono"], "body-md": ["IBM Plex Sans"], "code-inline": ["Space Mono"], "headline-lg-mobile": ["IBM Plex Sans"], "metric-sm": ["Space Mono"], "label-caps": ["IBM Plex Sans"], "metric-regular": ["Space Mono"] }, "fontSize": { "headline-md": ["20px", {"lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "headline-sm": ["16px", {"lineHeight": "22px", "fontWeight": "600"}], "headline-lg": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600"}], "metric-display": ["32px", {"lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "display-hero-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}], "display-hero": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "metric-display-mobile": ["24px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}], "code-inline": ["12px", {"lineHeight": "16px", "fontWeight": "400"}], "headline-lg-mobile": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "metric-sm": ["13px", {"lineHeight": "16px", "fontWeight": "400"}], "label-caps": ["11px", {"lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600"}], "metric-regular": ["16px", {"lineHeight": "20px", "fontWeight": "700"}] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_12px_rgba(1,15,31,0.6)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-primary text-[20px]">query_stats</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-bold truncate">DealLens</span><span class="px-1.5 py-0.5 rounded bg-surface-container text-secondary font-code-inline text-code-inline leading-none shrink-0">BYOK ACTIVE</span></div><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Underwrite rentals like a pro</span></div></div><div class="flex items-center gap-space-xs shrink-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full text-on-surface">
+<!-- Hero Section -->
+<section class="flex flex-col px-margin pt-space-md pb-space-lg">
+<!-- Value Badge -->
+<div class="inline-flex items-center gap-space-xs self-start px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-code-inline text-code-inline mb-space-sm shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="">DETERMINISTIC UNDERWRITING ENGINE</span>
+</div>
+<!-- Main Typography -->
+<h1 class="font-display-hero-mobile text-display-hero-mobile text-on-surface tracking-tight mb-space-xs">
+      Stop guessing on rentals
+    </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md leading-relaxed">
+      Underwrite any rental deal in 10 minutes, like a pro. Built for tech engineers, finance analysts, and clinicians demanding mathematical clarity—never sales hype or guru optimism.
+    </p>
+<!-- CTAs -->
+<div class="flex flex-col gap-space-xs mb-space-lg">
+<a class="w-full flex items-center justify-center gap-space-xs h-10 px-space-md bg-primary text-on-primary font-headline-sm text-headline-sm rounded-lg shadow-md active:scale-[0.99] transition-transform" href="#pricing">
+<span class="">Start Underwriting Free</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="w-full flex items-center justify-center gap-space-xs h-10 px-space-md bg-surface-container text-on-surface font-headline-sm text-headline-sm rounded-lg shadow-sm hover:bg-surface-container-high transition-colors" href="#interactive-sample">
+<span class="material-symbols-outlined text-primary text-[18px]">terminal</span>
+<span class="">Explore Sample Analysis</span>
+</a>
+</div>
+<!-- Quick Social Proof / Micro-Stats -->
+<div class="grid grid-cols-3 gap-space-xs py-space-sm px-space-sm bg-surface-container-low rounded-xl">
+<div class="flex flex-col items-center text-center">
+<span class="font-metric-regular text-metric-regular text-primary font-bold">100%</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Deterministic Math</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="font-metric-regular text-metric-regular text-secondary font-bold">~$0.003</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Cost Per Deal</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="font-metric-regular text-metric-regular text-tertiary font-bold">10 Min</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">To Full Verdict</span>
+</div>
+</div>
+</section>
+<!-- Interactive Sample Report Preview Card -->
+<section class="flex flex-col px-margin pb-space-lg" id="interactive-sample">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase">Live Teaser Preview</span>
+<span class="flex items-center gap-1 font-code-inline text-code-inline text-secondary">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+        Instant Computation
+      </span>
+</div>
+<!-- Interactive Card Container -->
+<div class="bg-surface-container rounded-xl shadow-xl overflow-hidden flex flex-col p-space-md relative">
+<!-- Ambient Backing Glow -->
+<div class="absolute -top-10 -right-10 w-36 h-36 bg-secondary/10 rounded-full blur-2xl pointer-events-none"></div>
+<!-- Property Header -->
+<div class="flex flex-col mb-space-sm z-10">
+<div class="flex items-start justify-between gap-space-xs mb-1">
+<div class="flex flex-col min-w-0">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-primary font-code-inline text-code-inline self-start mb-1">LIVE DEMO REPORT</span>
+<span class="font-headline-sm text-headline-sm text-on-surface truncate font-bold">[DEMO] 1234 Demo St</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Fort Pierce, FL 34982</span>
+</div>
+<!-- Verdict Pill -->
+<div class="shrink-0 flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container/20 text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-label-caps text-label-caps font-bold">Solid Buy (78/100)</span>
+</div>
+</div>
+</div>
+<!-- Property Visual Mini Thumbnail with generated spec -->
+<div class="relative w-full h-32 rounded-lg overflow-hidden mb-space-md shadow-inner bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Modern renovated single family Florida coastal rental home with dark grey roof trim, tidy xeriscape yard, concrete driveway under bright noon sky, high architectural photography quality, precision clean aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbZWJj7UfjDjKoLJ0SiLOTchKI2-FB_kVawccABa3LkCruSgvMOWLRsVQHlH6aR3RFuH6ler2RXOeb4I76zCS01OWxxHErHOQRYA0yGmISQpo42jV1OLiRxQY8J7Ryne8oz9hUWD1a7aPksGObr8vxLK7nkKI-EDtOQ49zkAfFiZ70jdDNUSNY7Jf-CbTLT9Dy64B97inS5UfEp2NuHxKHDouIDs-bX30vQBOj6sE">
+<div class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-code-inline text-code-inline">Built 2018 · 3 Bed · 2 Bath · 1,400 sqft</div>
+</div>
+<!-- Core Financial Inputs Bar -->
+<div class="grid grid-cols-2 gap-space-xs p-space-xs bg-surface-container-low rounded-lg mb-space-md">
+<div class="flex flex-col px-2 py-1">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Acquisition Price</span>
+<span class="font-metric-regular text-metric-regular text-on-surface font-bold" id="card-price-display">$250,000</span>
+</div>
+<div class="flex flex-col px-2 py-1">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Gross Monthly Rent</span>
+<span class="font-metric-regular text-metric-regular text-on-surface font-bold" id="card-rent-display">$2,000/mo</span>
+</div>
+</div>
+<!-- 3 Key Metric Teaser Badges (Positive Green Accents) -->
+<div class="grid grid-cols-3 gap-space-xs mb-space-md">
+<!-- Cap Rate -->
+<div class="bg-surface-container-high rounded-lg p-space-xs flex flex-col shadow-sm">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Cap Rate</span>
+<span class="font-metric-display-mobile text-metric-display-mobile text-secondary font-bold" id="card-cap-rate">6.2%</span>
+<span class="font-code-inline text-code-inline text-on-surface-variant mt-0.5">+0.8% spread</span>
+</div>
+<!-- Cash-on-Cash -->
+<div class="bg-surface-container-high rounded-lg p-space-xs flex flex-col shadow-sm">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">CoC Return</span>
+<span class="font-metric-display-mobile text-metric-display-mobile text-secondary font-bold" id="card-coc">5.86%</span>
+<span class="font-code-inline text-code-inline text-on-surface-variant mt-0.5">Yr-1 cash return</span>
+</div>
+<!-- Monthly Cash Flow -->
+<div class="bg-surface-container-high rounded-lg p-space-xs flex flex-col shadow-sm">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Net Cash Flow</span>
+<span class="font-metric-display-mobile text-metric-display-mobile text-secondary font-bold" id="card-cashflow">+$342</span>
+<span class="font-code-inline text-code-inline text-on-surface-variant mt-0.5">After reserves</span>
+</div>
+</div>
+<!-- Interactive Sliders Playground: Sensitivity test -->
+<div class="flex flex-col gap-space-sm p-space-sm bg-surface-container-lowest rounded-lg mb-space-md shadow-inner">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+            Interactive Sensitivity Test
+          </span>
+<span class="font-code-inline text-code-inline text-on-surface-variant">Live recalculation</span>
+</div>
+<!-- Slider 1: Rent Delta -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Estimated Monthly Rent</span>
+<span class="font-code-inline text-code-inline text-on-surface" id="slider-rent-val">$2,000/mo</span>
+</div>
+<input class="w-full accent-primary h-1.5 bg-surface-container-high rounded-lg cursor-pointer" id="rent-slider" max="2600" min="1600" step="50" type="range" value="2000">
+</div>
+<!-- Slider 2: Interest Rate -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Mortgage Rate (30yr Fixed)</span>
+<span class="font-code-inline text-code-inline text-on-surface" id="slider-rate-val">7.00%</span>
+</div>
+<input class="w-full accent-primary h-1.5 bg-surface-container-high rounded-lg cursor-pointer" id="rate-slider" max="9.0" min="5.0" step="0.25" type="range" value="7.00">
+</div>
+</div>
+<!-- Micro Audit Verdict Narrative preview -->
+<div class="p-space-sm rounded-lg bg-surface-container-high flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-secondary font-label-caps text-label-caps uppercase font-bold">
+<span class="material-symbols-outlined text-[16px]">psychology</span>
+          Deterministic Model + AI Narrative
+        </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          "At $2,000/mo gross rent and 6.75% rate, this asset comfortably surpasses your 1.25 DSCR safety floor (Actual: 1.34). Debt coverage holds even through a 10% vacancy shock."
+        </p>
+</div>
+</div>
+</section>
+<!-- Architectural Feature Comparison (Why Real Estate Analysts Choose This) -->
+<section class="flex flex-col px-margin pb-space-lg">
+<div class="flex flex-col mb-space-md">
+<span class="font-label-caps text-label-caps text-primary uppercase">Institutional Rigor</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">No formulas hidden in black boxes.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+        Most tools hide optimistic broker assumptions. DealLens runs pure deterministic finance equations backed by transparent auditing.
+      </p>
+</div>
+<div class="grid grid-cols-1 gap-space-xs">
+<!-- Card 1 -->
+<div class="p-space-md bg-surface-container rounded-lg flex items-start gap-space-sm shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[22px]">calculate</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Deterministic Financial Engine</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            NOI, DSCR, IRR waterfalls, and Cap Rates computed via auditable mathematical algorithms. AI only writes contextual commentary.
+          </span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="p-space-md bg-surface-container rounded-lg flex items-start gap-space-sm shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[22px]">key_vertical</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Zero-Markup BYOK Architecture</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Plug your OpenAI, Anthropic, or xAI key directly into local browser storage. Pay fractions of a penny instead of inflated SaaS token fees.
+          </span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="p-space-md bg-surface-container rounded-lg flex items-start gap-space-sm shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[22px]">database</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">RentCast API Integration</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Automatic neighborhood rental comps, historical property tax rolls, and real-time county insurance estimates instantly pre-filled.
+          </span>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Section -->
+<section class="flex flex-col px-margin pb-space-lg" id="pricing">
+<div class="flex flex-col items-center text-center mb-space-md">
+<span class="font-label-caps text-label-caps text-primary uppercase">Straightforward Pricing</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mt-1">Invest with zero lock-in</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+        Start with a 14-day risk-free trial. Upgrade, downgrade, or cancel anytime.
+      </p>
+<!-- Billing Cycle Toggle (Interactive) -->
+<div class="flex items-center gap-space-xs bg-surface-container-high p-1 rounded-full mt-space-sm shadow-sm">
+<button class="px-3 py-1 rounded-full text-on-surface-variant font-label-caps text-label-caps transition-all" id="toggle-monthly">Monthly</button>
+<button class="px-3 py-1 rounded-full bg-primary text-on-primary font-label-caps text-label-caps font-bold transition-all flex items-center gap-1 shadow-sm" id="toggle-annual">
+<span class="">Annual</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-secondary text-[10px] font-bold">SAVE 33%</span>
+</button>
+</div>
+</div>
+<!-- Active Tier Card (Featured) -->
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col shadow-xl relative overflow-hidden">
+<!-- Glow ribbon -->
+<div class="absolute top-0 right-0 w-28 h-28 bg-primary/10 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex justify-between items-start mb-space-sm">
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Pro Underwriter</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Full institutional tool suite</p>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary font-label-caps text-label-caps font-bold uppercase">
+          14-Day Free Trial
+        </span>
+</div>
+<!-- Price Stack -->
+<div class="flex items-baseline gap-1 mb-space-xs">
+<span class="font-metric-display text-metric-display text-on-surface font-bold" id="display-price">$120</span>
+<span class="font-body-md text-body-md text-on-surface-variant" id="display-cycle">/year</span>
+<span class="font-body-sm text-body-sm text-secondary ml-2 font-code-inline" id="display-subnote">(Billed $10/mo equivalent)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+        Zero hidden usage caps. No upcharges when you underwrite 50 properties in a single weekend.
+      </p>
+<!-- Value Props List -->
+<div class="flex flex-col gap-space-xs mb-space-md">
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span class="">Unlimited real-time property underwritings</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span class="">100% deterministic mathematical model (Zero AI math hallucinations)</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span class="">Live RentCast rental comp &amp; tax roll auto-fills</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span class="">One-click Institutional PDF Investment Memos</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span class="">BYOK privacy guarantee (Keys stored in local storage)</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span class="">Sensitivities &amp; 10-year IRR waterfall charts</span>
+</div>
+</div>
+<!-- Action Button -->
+<button class="w-full h-11 rounded-lg bg-primary text-on-primary font-headline-sm text-headline-sm font-bold shadow-md hover:bg-primary-container transition-all flex items-center justify-center gap-space-xs active:scale-[0.99]">
+<span class="">Start 14-Day Free Trial</span>
+<span class="material-symbols-outlined text-[18px]">rocket_launch</span>
+</button>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-center mt-space-xs">
+        No commitment · Cancel anytime with 1-click
+      </span>
+</div>
+</section>
+<!-- BYOK FAQ & Transparency Accordion -->
+<section class="flex flex-col px-margin pb-space-lg">
+<div class="flex flex-col mb-space-md">
+<span class="font-label-caps text-label-caps text-primary uppercase">Absolute Transparency</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Frequently Answered Truths</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+        We built DealLens because spreadsheet builders and generic SaaS wrappers gouge users on hidden token margins.
+      </p>
+</div>
+<!-- Accordion List -->
+<div class="flex flex-col gap-space-xs" id="faq-accordion">
+<!-- Item 1 -->
+<div class="bg-surface-container rounded-lg overflow-hidden transition-all shadow-sm">
+<button class="w-full p-space-md flex items-center justify-between text-left gap-space-sm faq-toggle" data-faq="1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">
+            Do I need an API key? Yes — here's why it's dramatically cheaper for you.
+          </span>
+<span class="material-symbols-outlined text-primary text-[20px] transition-transform duration-200 shrink-0" id="icon-faq-1" style="transform: rotate(180deg);">expand_more</span>
+</button>
+<div class="px-space-md pb-space-md" id="content-faq-1">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-sm">
+            Instead of paying us a $50–$100/mo markup for AI tokens, you bring your own OpenAI, Anthropic, or xAI key. A full comprehensive deal review costs fractions of a cent (<strong class="text-secondary font-code-inline">~$0.003</strong>).
+          </p>
+<div class="p-space-xs bg-surface-container-high rounded text-on-surface font-body-sm text-body-sm flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">lock</span>
+<span class="">Your secret key stays 100% in your browser's local storage and is never forwarded to or stored on our servers.</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container rounded-lg overflow-hidden transition-all shadow-sm">
+<button class="w-full p-space-md flex items-center justify-between text-left gap-space-sm faq-toggle" data-faq="2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">
+            Does the AI do the math?
+          </span>
+<span class="material-symbols-outlined text-primary text-[20px] transition-transform duration-200 shrink-0" id="icon-faq-2">expand_more</span>
+</button>
+<div class="px-space-md pb-space-md hidden" id="content-faq-2">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<strong class="text-on-surface font-bold">No.</strong> LLMs are notoriously error-prone at multi-step compounded arithmetic. All financial calculations (NOI, Cap Rate, DSCR, Cash-on-Cash, 10-year IRR, and amortization curves) run through 100% deterministic code. The AI simply analyzes the verified outputs to narrate macro risks, neighborhood trends, and dealbreaker red flags.
+          </p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface-container rounded-lg overflow-hidden transition-all shadow-sm">
+<button class="w-full p-space-md flex items-center justify-between text-left gap-space-sm faq-toggle" data-faq="3">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">
+            Can I cancel anytime?
+          </span>
+<span class="material-symbols-outlined text-primary text-[20px] transition-transform duration-200 shrink-0" id="icon-faq-3">expand_more</span>
+</button>
+<div class="px-space-md pb-space-md hidden" id="content-faq-3">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Yes. With a single click inside your Settings drawer, your subscription terminates instantly. There are no retention survey traps, phone calls, or artificial cooling-off delays.
+          </p>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="bg-surface-container rounded-lg overflow-hidden transition-all shadow-sm">
+<button class="w-full p-space-md flex items-center justify-between text-left gap-space-sm faq-toggle" data-faq="4">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">
+            What if I don't know how to generate an API key?
+          </span>
+<span class="material-symbols-outlined text-primary text-[20px] transition-transform duration-200 shrink-0" id="icon-faq-4">expand_more</span>
+</button>
+<div class="px-space-md pb-space-md hidden" id="content-faq-4">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Our onboarding setup includes a 60-second visual step-by-step walkthrough for OpenAI and Anthropic console accounts. You only need a standard account with $5 of credits, which typically funds over 1,500 property underwriting reports.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Callout -->
+<section class="flex flex-col px-margin pb-space-lg">
+<div class="p-space-lg rounded-xl bg-surface-container-high shadow-lg flex flex-col items-center text-center relative overflow-hidden">
+<div class="w-12 h-12 rounded-full bg-secondary-container/20 text-secondary flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined text-[28px]">query_stats</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mb-space-xs">
+        Ready to underwrite your first deal?
+      </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md max-w-xs">
+        Stop agonizing over broken formulas in Excel. Get real-time verdicts backed by institutional mathematics.
+      </p>
+<button class="w-full h-11 rounded-lg bg-primary text-on-primary font-headline-sm text-headline-sm font-bold shadow-md active:scale-[0.99] transition-transform flex items-center justify-center gap-space-xs">
+<span class="">Get Started Now</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Footer / Trust Badges Section -->
+<footer class="flex flex-col px-margin pb-space-xl">
+<div class="pt-space-md border-t-0 bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-md">
+<!-- Trust Grid -->
+<div class="grid grid-cols-1 gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[18px]">shield</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">100% Client-Side Privacy</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sensitive deal spreadsheets and notes stay strictly on your device.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">visibility_off</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Zero Server Tracking</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">No third-party behavioral trackers or data resale to broker networks.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[18px]">encrypted</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Bank-Grade Local Encryption</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Browser WebCrypto APIs secure your local API keys at rest.</span>
+</div>
+</div>
+</div>
+<!-- Legal / Meta -->
+<div class="flex flex-col items-center justify-between gap-space-xs pt-space-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-code-inline text-code-inline">
+<span class="">DEALLENS V2.4</span>
+<span class="">·</span>
+<span class="">FLORIDA TECH TERMINAL</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-center opacity-70">
+          Financial estimates provided for educational &amp; quantitative screening purposes. Not financial advice.
+        </p>
+</div>
+</div>
+</footer>
+</div>
+<script>
+  // Dynamic Sensitivity Playground recalculations
+  const rentSlider = document.getElementById('rent-slider');
+  const rateSlider = document.getElementById('rate-slider');
+  const rentValDisplay = document.getElementById('slider-rent-val');
+  const rateValDisplay = document.getElementById('slider-rate-val');
+  const cardRentDisplay = document.getElementById('card-rent-display');
+  const cardCapRate = document.getElementById('card-cap-rate');
+  const cardCoC = document.getElementById('card-coc');
+  const cardCashflow = document.getElementById('card-cashflow');
+
+  function updateCalculations() {
+    if (!rentSlider || !rateSlider) return;
+    const rent = parseFloat(rentSlider.value);
+    const rate = parseFloat(rateSlider.value);
+
+    // Update textual indicators
+    rentValDisplay.textContent = '$' + rent.toLocaleString() + '/mo';
+    cardRentDisplay.textContent = '$' + rent.toLocaleString() + '/mo';
+    rateValDisplay.textContent = rate.toFixed(2) + '%';
+
+    const purchasePrice = 250000;
+    const annualRent = rent * 12;
+    // Estimated OpEx: 35% of gross rent
+    const opex = annualRent * 0.35;
+    const noi = annualRent - opex;
+    const capRate = (noi / purchasePrice) * 100;
+
+    // Loan: 80% LTV = $200,000, 30 years
+    const loanAmount = 200000;
+    const monthlyRate = (rate / 100) / 12;
+    const nPayments = 360;
+    const monthlyMortgage = loanAmount * (monthlyRate * Math.pow(1 + monthlyRate, nPayments)) / (Math.pow(1 + monthlyRate, nPayments) - 1);
+    
+    // Monthly Cash Flow
+    const monthlyOpEx = opex / 12;
+    const netMonthlyCashflow = rent - monthlyOpEx - monthlyMortgage;
+
+    // CoC Return (Down payment $50k + $5k closing costs = $55k total cash invested)
+    const annualCashFlow = netMonthlyCashflow * 12;
+    const totalCashInvested = 55000;
+    const cocReturn = (annualCashFlow / totalCashInvested) * 100;
+
+    // Apply values to card
+    cardCapRate.textContent = capRate.toFixed(1) + '%';
+    cardCoC.textContent = cocReturn.toFixed(1) + '%';
+    
+    if (netMonthlyCashflow >= 0) {
+      cardCashflow.textContent = '+$' + Math.round(netMonthlyCashflow);
+      cardCashflow.className = "font-metric-display-mobile text-metric-display-mobile text-secondary font-bold";
+    } else {
+      cardCashflow.textContent = '-$' + Math.abs(Math.round(netMonthlyCashflow));
+      cardCashflow.className = "font-metric-display-mobile text-metric-display-mobile text-error font-bold";
+    }
+  }
+
+  if (rentSlider && rateSlider) {
+    rentSlider.addEventListener('input', updateCalculations);
+    rateSlider.addEventListener('input', updateCalculations);
+  }
+
+  // Interactive Pricing Toggle
+  const toggleMonthly = document.getElementById('toggle-monthly');
+  const toggleAnnual = document.getElementById('toggle-annual');
+  const displayPrice = document.getElementById('display-price');
+  const displayCycle = document.getElementById('display-cycle');
+  const displaySubnote = document.getElementById('display-subnote');
+
+  if (toggleMonthly && toggleAnnual) {
+    toggleMonthly.addEventListener('click', () => {
+      toggleMonthly.className = "px-3 py-1 rounded-full bg-primary text-on-primary font-label-caps text-label-caps font-bold transition-all shadow-sm";
+      toggleAnnual.className = "px-3 py-1 rounded-full text-on-surface-variant font-label-caps text-label-caps transition-all flex items-center gap-1";
+      displayPrice.textContent = "$15";
+      displayCycle.textContent = "/month";
+      displaySubnote.textContent = "(Standard monthly flex)";
+    });
+
+    toggleAnnual.addEventListener('click', () => {
+      toggleAnnual.className = "px-3 py-1 rounded-full bg-primary text-on-primary font-label-caps text-label-caps font-bold transition-all flex items-center gap-1 shadow-sm";
+      toggleMonthly.className = "px-3 py-1 rounded-full text-on-surface-variant font-label-caps text-label-caps transition-all";
+      displayPrice.textContent = "$120";
+      displayCycle.textContent = "/year";
+      displaySubnote.textContent = "(Billed $10/mo equivalent - Save 33%)";
+    });
+  }
+
+  // Accordion Toggle Logic
+  const toggles = document.querySelectorAll('.faq-toggle');
+  toggles.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.getAttribute('data-faq');
+      const content = document.getElementById('content-faq-' + id);
+      const icon = document.getElementById('icon-faq-' + id);
+      const isHidden = content.classList.contains('hidden');
+
+      // Close all
+      document.querySelectorAll('[id^="content-faq-"]').forEach(c => c.classList.add('hidden'));
+      document.querySelectorAll('[id^="icon-faq-"]').forEach(i => i.style.transform = 'rotate(0deg)');
+
+      if (isHidden) {
+        content.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
+
+  // Open First FAQ by default for immediate discoverability
+  const firstFaq = document.getElementById('content-faq-1');
+  const firstIcon = document.getElementById('icon-faq-1');
+  if (firstFaq && firstIcon) {
+    firstFaq.classList.remove('hidden');
+    firstIcon.style.transform = 'rotate(180deg)';
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-1px_16px_rgba(1,15,31,0.7)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] transition-colors text-primary font-semibold" data-path="analyze" href="#"><span class="material-symbols-outlined text-[22px]">tune</span><span class="font-label-caps text-label-caps mt-0.5">Analyze</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">analytics</span><span class="font-label-caps text-label-caps mt-0.5">Dashboard</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="watch-&amp;-comp" href="#"><span class="material-symbols-outlined text-[22px]">compare_arrows</span><span class="font-label-caps text-label-caps mt-0.5">Watch &amp; Comp</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[22px]">lock_open</span><span class="font-label-caps text-label-caps mt-0.5">Settings</span></a></div></nav>
+
+</body></html>
